@@ -1,8 +1,7 @@
 import React from 'react';
 import { Container, Image, Data } from './styles';
 import camera from '../../assets/cards/camera.png';
-import dashboard from '../../assets/cards/dashboard.png';
-import bag from '../../assets/cards/bag.png';
+
 
 interface CardProps {
   title: string;

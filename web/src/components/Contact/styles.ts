@@ -1,86 +1,55 @@
-import styled, { keyframes } from 'styled-components';
-import { shade } from 'polished';
+import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 100vh;
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex: 1;
 `;
 
 export const Content = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-
   width: 100%;
-  max-width: 700px;
-`;
 
-const appearFromLeft = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
+  & p {
+    padding: 10px;
   }
 
-`;
-export const AnimationContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  animation: ${appearFromLeft} 1s;
-
-  form {
-    margin: 80px 0;
-    width: 340px;
-    text-align: center;
-
-    h1 {
-      margin-bottom: 24px;
-    }
-
-    a {
-      color: #f4ede8;
-      display: block;
-      margin-top: 24px;
-      text-decoration: none;
-      transition: color 0.2s;
-
-      &:hover {
-        color: ${shade(0.2, '#f4ede8')};
-      }
-    }
+  &:last-child {
+    margin-bottom: 100px;
   }
 
-  > a {
-    color: #ff9000;
-    margin-top: 24px;
-    text-decoration: none;
-    transition: color 0.2s;
+  & input {
+    padding: 18px;
+    border: 1px solid #ccc;
+    margin-right: 30px;
+    width: 100%;
+    border-radius: 20px;
+  }
 
+  & > input:last-child {
+    padding: 18px;
+    border: 1px solid #ccc;
+    margin-right: 30px;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  & p {
+    color: #828181;
+  }
+
+  & form button {
     display: flex;
     align-items: center;
-
-    svg {
-      margin-right: 16px;
-    }
-
-    &:hover {
-      color: ${shade(0.2, '#ff9000')};
-    }
+    justify-content: center;
+    margin-top: 25px;
   }
-`;
 
-export const Background = styled.div`
-  flex: 1;
-
-  background-size: cover;
-  opacity: 0.5;
-  /*mix-blend-mode: hard-light;*/
+  & form {
+    margin-left: 120px;
+  }
 `;

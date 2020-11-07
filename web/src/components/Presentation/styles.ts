@@ -10,6 +10,7 @@ export const Container = styled.div`
   width: 100%;
   padding: 0 16px;
   color: #828181;
+  margin-top: 100px;
 
   h2 {
     font-size: 24x;

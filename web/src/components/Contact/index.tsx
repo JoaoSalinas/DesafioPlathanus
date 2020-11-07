@@ -1,10 +1,17 @@
 import React, { useRef, useCallback } from 'react';
-import { FiLogIn, FiMail, FiLock } from 'react-icons/fi';
+import {
+  FiLogIn,
+  FiMail,
+  FiFacebook,
+  FiInstagram,
+  FiLinkedin,
+  FiMessageCircle,
+} from 'react-icons/fi';
 import { Form } from '@unform/web';
 import { FormHandles } from '@unform/core';
 import * as Yup from 'yup';
-import { Link, useHistory } from 'react-router-dom';
-import { Container, Content, Background, AnimationContainer } from './styles';
+import { useHistory } from 'react-router-dom';
+import { Container, Content } from './styles';
 import Input from '../Input';
 import Button from '../Button';
 import getValidationError from '../../utils/getValidationErrors';
@@ -51,8 +58,21 @@ const Contact: React.FC = () => {
 
   return (
     <Container>
-      <Content />
-      <Background />
+      <Content>
+        <div>
+          <p>Email: contato@plathanus.com.br </p>
+          <p>Telefone: (48) 3374-8922 </p>
+          <p>Endereço: Rua da Praça, 241</p>
+          <p>Ed. Pátio da Praça Office Green – Sala 908 Pedra Branca, </p>
+          <p>Palhoça SC</p>
+        </div>
+        <Form ref={formRef} onSubmit={handleSubmit}>
+          <Input name="name" icon={FiLogIn} placeholder="Nome" />
+          <Input name="mail" icon={FiMail} placeholder="Email" />
+          <Input name="mail" icon={FiMessageCircle} placeholder="Mensagem" />
+          <Button type="submit">Enviar</Button>
+        </Form>
+      </Content>
     </Container>
   );
 };

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
-import { FiArrowDown } from 'react-icons/fi';
 
 export const Container = styled.button`
   border-radius: 20px;

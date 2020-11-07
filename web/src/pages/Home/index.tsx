@@ -68,8 +68,8 @@ const Home: React.FC = () => {
 
       <Presentation
         anchor="contact-us"
-        title="Fale Conosco"
-        description="Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+        title="Quer trocar uma ideia?"
+        description="Entre em contato para saber mais sobre nossas soluções. E, não esqueça, tudo pode ser personalizado às necessidades do seu negócio."
       />
       <Contact />
     </>
